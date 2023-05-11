@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <title>Document</title>
 </head>
 <body>
@@ -46,6 +47,34 @@
     <div class="rightre">
         <img src="imagenes/cloud covering left trees (1).png" alt=""> 
     </div>
-    
+    <div id="weather"></div>
+  
+    <script>
+        if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(showPosition);
+            } else {
+                alert("Tu navegador no soporta la API de geolocalización");
+            }
+            
+            function showPosition(position) {
+                const latitud = position.coords.latitude;
+                const longitud = position.coords.longitude;
+                const url = `https://api.openweathermap.org/data/2.5/weather?lat=${latitud}&lon=${longitud}&appid=98d4ecc25336713f1bf8b87dd5078eaa`;
+                
+                fetch(url)
+                .then(response => response.json())
+                .then(data => {
+                    const temperature = Math.round(data.main.temp - 273.15);
+                    const description = data.weather[0].description;
+                    const cityName = data.name;
+                    const weatherElement = document.getElementById("weather");
+                    weatherElement.innerHTML = `La temperatura actual en ${cityName} es de ${temperature}°C con ${description}.`;
+                })
+                .catch(error => {
+                    console.error(error);
+                });
+            }
+    </script>
 </body>
+
 </html>

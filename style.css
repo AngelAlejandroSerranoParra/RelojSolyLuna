@@ -8,8 +8,8 @@ body{
 .leftree{
     position: fixed;
     
-    left: 75%;
-    top: 79%;
+    left: 300px;
+    top: 660px;
     z-index: 3;
 
 }

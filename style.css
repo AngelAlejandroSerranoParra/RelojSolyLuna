@@ -78,7 +78,7 @@ body{
     top:230px;
     z-index: 1;
     
-    s
+    
     
 }
 
@@ -96,4 +96,12 @@ body{
     left: 0px;
     top: 215px;
     z-index: 0;
+}
+
+
+.rightre{
+    position: fixed;
+    left: -150px;
+    top: 780px;
+    z-index: 2;
 }

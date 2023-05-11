@@ -1,0 +1,99 @@
+body{
+   width: 390px;
+   height: 844px;
+
+    background: #3B556C;
+    border-radius: 450px;
+}
+.leftree{
+    position: fixed;
+    
+    left: 75%;
+    top: 79%;
+    z-index: 3;
+
+}
+
+.rightree{
+    position: fixed;
+    left: 00px;
+    top: 780px;
+    z-index: 3;
+}
+
+.stars{
+    
+    position: fixed;
+    ;
+    left: 0%;
+    top: 0%;
+    z-index: 0;
+
+
+}
+.moon{
+    position: fixed;
+    left: 270px;
+    top: 50px;
+    z-index: 2;
+
+}
+.treeone{
+    position: fixed;
+    left: 335px;
+    top: 640px;
+    z-index: 2;
+
+}
+.treetwo{
+    position: fixed;
+    left: 110px;
+    top: 670px;
+    z-index: 2;
+
+}
+.treetre{
+    position: fixed;
+    left: 40px;
+    top: 650px;
+    z-index: 2;
+
+
+}
+
+.treefor{
+    position: fixed;
+   
+    left: -30px;
+    top: 680px;
+    z-index: 2;
+
+
+}
+
+.cloud{
+    position: fixed;
+   
+    left: 0%;
+    top:230px;
+    z-index: 1;
+    
+    
+    
+}
+
+.cloudgren{
+    position: fixed;
+    left: 0px;
+    top: 310px;
+    z-index: 0;
+
+
+}
+
+.cloudbig{
+    position: fixed;
+    left: 0px;
+    top: 215px;
+    z-index: 0;
+}

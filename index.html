@@ -47,7 +47,7 @@
     <div class="rightre">
         <img src="imagenes/cloud covering left trees (1).png" alt=""> 
     </div>
-    <div id="weather"></div>
+    <div id="weather" style="text-align: center; color: aqua;"></div>
   
     <script>
            if (navigator.geolocation) {
@@ -65,11 +65,11 @@
           .then(response => response.json())
           .then(data => {
             const temperature = Math.round(data.main.temp - 273.15);
-            const description = data.weather[0].description;
+            
             const cityName = data.name;
             const timezone = data.timezone;
             const weatherElement = document.getElementById("weather");
-            weatherElement.innerHTML = `La temperatura actual en ${cityName} es de ${temperature}°C con ${description}. La hora local es <span id="time"></span>.`;
+            weatherElement.innerHTML = `La temperatura actual en ${cityName} es de ${temperature}°C. La hora local es <span id="time"></span>.`;
 
             // Actualiza la hora cada segundo
             setInterval(() => {

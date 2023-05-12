@@ -1,61 +1,92 @@
 body{
-   width: 390px;
-   height: 844px;
+   width: 500px;
+   height: 900px;
 
     background: #3B556C;
     border-radius: 450px;
+    margin: 0px ;
+    padding: 0px;
 }
 .leftree{
     position: fixed;
     
-    left: 300px;
-    top: 660px;
-    z-index: 3;
+   
 
 }
 
+.letre{
+    position: fixed;
+    width: 25%;
+    height: auto;
+    top: 59%;
+    left: 55%;
+    z-index: 2;
+}
+
+.greycould{
+    top: 21%;
+    position: fixed;
+    width: 80%;
+    height: auto;
+    z-index: 1;
+}
+
 .rightree{
+    width: 50%;
     position: fixed;
     left: 00px;
-    top: 780px;
+    top: 73%;
     z-index: 3;
+}
+
+.moonimg{
+    position: fixed;
+    width: 30%;
+    height: auto;
+    left: 50%;
+    top: 3%;
 }
 
 .stars{
     
     position: fixed;
     ;
-    left: 0%;
-    top: 0%;
+    
     z-index: 0;
 
 
 }
-.moon{
+.starimg{
     position: fixed;
-    left: 270px;
-    top: 50px;
-    z-index: 2;
-
+    width: 90%;
+    
 }
+
+
 .treeone{
     position: fixed;
-    left: 335px;
-    top: 640px;
-    z-index: 2;
+    width: 16%;
+    height: auto;
+    left: 64%;
+    top: 57%;
+    z-index: 1;
 
 }
 .treetwo{
     position: fixed;
-    left: 110px;
-    top: 670px;
+    width: 25%;
+    height: auto;
+    left: 21%;
+    top: 63%;
     z-index: 2;
 
 }
 .treetre{
     position: fixed;
-    left: 40px;
-    top: 650px;
+    width: 25%;
+    height: auto;
+    left: 10%;
+    top: 62%;
     z-index: 2;
 
 
@@ -75,7 +106,7 @@ body{
     position: fixed;
    
     left: 0%;
-    top:230px;
+    top:42%;
     z-index: 1;
     
     
@@ -87,16 +118,18 @@ body{
     left: 0px;
     top: 310px;
     z-index: 0;
+    width: 50%;
 
 
 }
 
 .cloudbig{
     position: fixed;
-    left: 0px;
-    top: 215px;
+    left: 0%;
+    top: 10%;
     z-index: 0;
 }
+
 
 
 .rightre{

@@ -105,3 +105,30 @@ body{
     top: 780px;
     z-index: 2;
 }
+
+.constinf{
+    position: fixed;
+    width: 300px;
+    height: 200px;
+
+    background: #2C3F50;
+    border-radius: 30px;
+    opacity: 90%;
+    z-index: 1;
+
+    top: 130px;
+    left: 50px;
+
+}
+
+.inf{
+    position: fixed;
+    text-align: left;
+    color: rgb(227, 188, 58);
+    z-index: 3;
+    top: 150px;
+    left: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+}
+

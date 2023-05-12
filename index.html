@@ -47,9 +47,15 @@
     <div class="rightre">
         <img src="imagenes/cloud covering left trees (1).png" alt=""> 
     </div>
-    <div class="inf" id="weather">
+    <div class="conH">
+        <p class="inf" id="weather"></p>
     </div>
-    <div class="constinf">
+    <div class="ConT">
+        <p id="timewather" class="inft"></p>
+    </div>
+
+    <div class="ConD">
+        <p id="daywather"></p>
     </div>
     
   
@@ -73,7 +79,13 @@
             const cityName = data.name;
             const timezone = data.timezone;
             const weatherElement = document.getElementById("weather");
-            weatherElement.innerHTML = `La temperatura actual en ${cityName} es de ${temperature}°C. La hora local es <span id="time"></span>.`;
+            weatherElement.innerHTML = `${temperature}°C.`;
+            const WatherTime = document.getElementById("timewather");
+            WatherTime.innerHTML = `<span id="time"></span>`;
+            const daywather = document.getElementById("daywather");
+            daywather.innerHTML = `<span id="date"></span>.`;
+            
+
 
             // Actualiza la hora cada segundo
             setInterval(() => {
@@ -83,7 +95,14 @@
               const minutes = localTime.getMinutes();
               const seconds = localTime.getSeconds();
               const timeElement = document.getElementById("time");
-              timeElement.innerHTML = `${hours}:${minutes}:${seconds}`;
+              timeElement.innerHTML = `${hours}:${minutes}`;
+
+              const day = localTime.getDate();
+              const month = localTime.getMonth() + 1; // Los meses se numeran de 0 a 11
+              const year = localTime.getFullYear();
+              const dateElement = document.getElementById("date");
+              dateElement.innerHTML = `${day}/${month}/${year}`;
+
             }, 1000);
           })
           .catch(error => {

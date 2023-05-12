@@ -156,9 +156,23 @@ body{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 30px;
     text-align: center;
-    left: 28%;
+    left: 110px;
+    top: 360px;
+
 
     
+}
+
+.infcity{
+    position: fixed;
+    
+    color: rgb(226, 191, 36);
+    z-index: 3;
+   
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+
+    top: 230px;
 }
 
 .ConD{
@@ -171,4 +185,30 @@ body{
     border-radius: 30px;
     opacity: 90%;
     z-index: 1;
+}
+
+.infD{
+    position: fixed;
+    
+    color: rgb(8, 92, 104);
+    z-index: 3;
+   
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 40px;
+    text-align: center;
+    left: 225px;
+    top: 350px;
+}
+
+.infM{
+    position: fixed;
+    
+    color: rgb(226, 191, 36);
+    z-index: 3;
+   
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 40px;
+    text-align: center;
+    left: 270px;
+    top: 350px;
 }

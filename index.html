@@ -49,13 +49,16 @@
     </div>
     <div class="conH">
         <p class="inf" id="weather"></p>
+        <p class="infcity" id="local"></p>
     </div>
     <div class="ConT">
         <p id="timewather" class="inft"></p>
     </div>
 
     <div class="ConD">
-        <p id="daywather"></p>
+        <p class="infD" id="day"></p>
+        <p class="infM" id="month"></p>
+
     </div>
     
   
@@ -82,9 +85,17 @@
             weatherElement.innerHTML = `${temperature}°C.`;
             const WatherTime = document.getElementById("timewather");
             WatherTime.innerHTML = `<span id="time"></span>`;
-            const daywather = document.getElementById("daywather");
-            daywather.innerHTML = `<span id="date"></span>.`;
+
+            const day = document.getElementById("day");
+            day.innerHTML = `<span id="day"></span>`;
+
+            const montht=document.getElementById("month");
+            montht.innerHTML=`<span id="month"></span>`;
+
+
             
+            const localc=document.getElementById("local")
+            localc.innerHTML = `${cityName}`;
 
 
             // Actualiza la hora cada segundo
@@ -100,9 +111,11 @@
               const day = localTime.getDate();
               const month = localTime.getMonth() + 1; // Los meses se numeran de 0 a 11
               const year = localTime.getFullYear();
-              const dateElement = document.getElementById("date");
-              dateElement.innerHTML = `${day}/${month}/${year}`;
-
+              const dateElement = document.getElementById("day");
+              dateElement.innerHTML = `${day}`;
+              const dateElementm = document.getElementById("month");
+              dateElementm.innerHTML = `|${month}`;
+ 
             }, 1000);
           })
           .catch(error => {

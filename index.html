@@ -10,6 +10,256 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <title>Document</title>
 </head>
+<style>
+  body{
+   width: 500px;
+   height: 900px;
+
+    background: #1a2229;
+    border-radius: 450px;
+    margin: 0px ;
+    padding: 0px;
+}
+.leftree{
+    position: fixed;
+    
+   
+
+}
+
+.letre{
+    position: fixed;
+    width: 25%;
+    height: auto;
+    top: 59%;
+    left: 55%;
+    z-index: 2;
+}
+
+.greycould{
+    top: 21%;
+    position: fixed;
+    width: 80%;
+    height: auto;
+    z-index: 1;
+}
+
+.rightree{
+    width: 50%;
+    position: fixed;
+    left: 00px;
+    top: 73%;
+    z-index: 3;
+}
+
+.moonimg{
+    position: fixed;
+    width: 30%;
+    height: auto;
+    left: 50%;
+    top: 3%;
+}
+
+.stars{
+    
+    position: fixed;
+    ;
+    
+    z-index: 0;
+
+
+}
+.starimg{
+    position: fixed;
+    width: 90%;
+    
+}
+
+
+.treeone{
+    position: fixed;
+    width: 16%;
+    height: auto;
+    left: 64%;
+    top: 57%;
+    z-index: 1;
+
+}
+.treetwo{
+    position: fixed;
+    width: 25%;
+    height: auto;
+    left: 21%;
+    top: 63%;
+    z-index: 2;
+
+}
+.treetre{
+    position: fixed;
+    width: 25%;
+    height: auto;
+    left: 10%;
+    top: 62%;
+    z-index: 2;
+
+
+}
+
+.treefor{
+    position: fixed;
+   
+    left: 0px;
+    top: 64%;
+    z-index: 1;
+
+
+}
+
+.cloud{
+    position: fixed;
+   
+    left: 0%;
+    top:12%;
+    z-index: 1;
+    width: 60%;
+    
+    
+    
+}
+
+.cloudgren{
+    position: fixed;
+    width: 80%;
+    left: 0px;
+    top: 29%;
+    z-index: 0;
+
+
+}
+
+.cloudbig{
+    position: fixed;
+    left: 0%;
+    top: 10%;
+    z-index: 0;
+}
+
+
+
+.rightre{
+    position: fixed;
+    left: -150px;
+    top: 780px;
+    z-index: 2;
+}
+
+.conH{
+    position: fixed;
+    
+    width: 247px;
+    height: 149px;
+    left: 80px;
+    top: 180px;
+
+    background: #ffffff;
+    border-radius: 30px;
+    opacity: 90%;
+    z-index: 1;
+
+    
+}
+.inf{
+    position: fixed;
+    
+    color: rgb(8, 92, 104);
+    z-index: 3;
+   
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 80px;
+
+    top: 100px;
+}
+
+
+.ConT{
+    position: absolute;
+    width: 130px;
+    height: 133px;
+    left: 80px;
+    top: 350px;
+
+    background: #ffffff;
+    border-radius: 30px;
+    opacity: 90%;
+    z-index: 1;
+}
+
+.inft{
+    position: fixed;
+    
+    color: rgb(8, 92, 104);
+    z-index: 3;
+   
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    text-align: center;
+    left: 110px;
+    top: 360px;
+
+
+    
+}
+
+.infcity{
+    position: fixed;
+    
+    color: rgb(226, 191, 36);
+    z-index: 3;
+   
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+
+    top: 230px;
+}
+
+.ConD{
+    position: fixed;
+    width: 108px;
+    height: 133px;
+    left: 220px;
+    top: 350px;
+    background: #ffffff;
+    border-radius: 30px;
+    opacity: 90%;
+    z-index: 1;
+}
+
+.infD{
+    position: fixed;
+    
+    color: rgb(8, 92, 104);
+    z-index: 3;
+   
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 40px;
+    text-align: center;
+    left: 225px;
+    top: 350px;
+}
+
+.infM{
+    position: fixed;
+    
+    color: rgb(226, 191, 36);
+    z-index: 3;
+   
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 40px;
+    text-align: center;
+    left: 270px;
+    top: 350px;
+}
+</style>
 <body>
  
 
@@ -26,8 +276,8 @@
         <img class="treefor" src="imagenes/tree2.png" alt="">
 
     </div>
-    <div class="stars">
-        <img class="starimg" src="imagenes/stars.png" alt="">
+    <div id="stars" class="stars">
+        <img id="stars" class="starimg" src="imagenes/stars.png" alt="">
     </div>
  
     
@@ -124,6 +374,21 @@
               } else {
                 smallclouds.src = "imagenes/clouds.png";
               }
+
+              if (hours >= 6 && hours < 18) {
+                document.body.style.backgroundColor = "#63ABEE";
+              } else {
+                document.body.style.backgroundColor = "#1a2229";
+              }
+
+              const stars = document.getElementById("stars");
+              if (hours >= 6 && hours < 18) {
+                stars.style.display = "none";
+              } else {
+                stars.style.display = "block";
+              }
+
+
  
             }, 1000);
           })

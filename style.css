@@ -2,7 +2,7 @@ body{
    width: 500px;
    height: 900px;
 
-    background: #3B556C;
+    background: #1a2229;
     border-radius: 450px;
     margin: 0px ;
     padding: 0px;
@@ -95,9 +95,9 @@ body{
 .treefor{
     position: fixed;
    
-    left: -30px;
-    top: 680px;
-    z-index: 2;
+    left: 0px;
+    top: 64%;
+    z-index: 1;
 
 
 }
@@ -106,8 +106,9 @@ body{
     position: fixed;
    
     left: 0%;
-    top:42%;
+    top:12%;
     z-index: 1;
+    width: 60%;
     
     
     
@@ -115,10 +116,10 @@ body{
 
 .cloudgren{
     position: fixed;
+    width: 80%;
     left: 0px;
-    top: 310px;
+    top: 29%;
     z-index: 0;
-    width: 50%;
 
 
 }

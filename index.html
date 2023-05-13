@@ -15,36 +15,21 @@
 
     <div class="leftree">
         <img class="letre" src="imagenes/cloud covering left trees.png" alt="">
-        <img class="greycould" src="imagenes/grey clouds.png" alt="">
+        <img id="clouds" class="greycould" src="imagenes/grey clouds.png" alt="">
         <img class="rightree" src="imagenes/cloud covering left trees (1).png" alt=""> 
-        <img class="moonimg" src="imagenes/Moon.png" alt="">
+        <img  id="image" class="moonimg" src="imagenes/Moon.png" alt="">
         <img class="treeone" src="imagenes/tree.png" alt="">
         <img class="treetwo" src="imagenes/tree2.png" alt="">
-        <img  class="treetre" src="imagenes/treetre.png" alt="">
+        <img class="treetre" src="imagenes/treetre.png" alt="">
+        <img id="smallclouds" class="cloudgren"src="imagenes/clouds.png" alt="">
+        <img class="cloud" src="imagenes/white clouds.png" alt="">
+        <img class="treefor" src="imagenes/tree2.png" alt="">
 
     </div>
-    
-    
     <div class="stars">
         <img class="starimg" src="imagenes/stars.png" alt="">
     </div>
-   
-    
-   
-    
-    
-    
-    
-    
-    <div class="treefor">
-        <img src="imagenes/tree2.png" alt="">
-    </div>
-    <div class="cloud">
-        <img src="imagenes/white clouds.png" alt="">
-    </div>
-    <div class="cloudgren">
-        <img src="imagenes/cloud2s.png" alt="">
-    </div>
+ 
     
     <div class="rightre">
         <img src="imagenes/cloud covering left trees (1).png" alt=""> 
@@ -117,6 +102,28 @@
               dateElement.innerHTML = `${day}`;
               const dateElementm = document.getElementById("month");
               dateElementm.innerHTML = `|${month}`;
+
+
+              const imageElement = document.getElementById("image");
+              if (hours >= 6 && hours < 18){
+                imageElement.src="imagenes/soon.png"
+              } else {
+                imageElement.src = "imagenes/Moon.png";
+              }
+
+              const clouds = document.getElementById("clouds");
+              if (hours >= 6 && hours < 18){
+                clouds.src="imagenes/day clouds.png"
+              } else {
+                clouds.src ="imagenes/grey clouds.png";
+              }
+
+              const smallclouds = document.getElementById("smallclouds");
+              if (hours >= 6 && hours < 18){
+                smallclouds.src="imagenes/dclouds.png"
+              } else {
+                smallclouds.src = "imagenes/clouds.png";
+              }
  
             }, 1000);
           })
